@@ -1,4 +1,4 @@
-mongoose-times - Customizable timestamp keys for [Mongoose](https://github.com/LearnBoost/mongoose)
+mongoose-times
 ==============
 
 [![Build Status](https://secure.travis-ci.org/nicholasconfer/mongoose-times.png?branch=master)](https://travis-ci.org/nicholasconfer/mongoose-times)
@@ -11,10 +11,9 @@ Plugin for [Mongoose](https://github.com/LearnBoost/mongoose) that adds `createD
 
 ## Usage
 
-Below are [CoffeeScript](https://github.com/jashkenas/coffee-script) and Javascript Examples
-
 The examples below create a message model that will include `createDate` and `lastUpdateDate` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
 
+[CoffeeScript](https://github.com/jashkenas/coffee-script) Example
 ```CoffeeScript
 mongoose = require "mongoose"
 timestamps = require "mongoose-times"
@@ -28,7 +27,8 @@ ExampleMessageSchema.plugin timestamps
 exampleMessage = mongoose.model "ExampleMessage", ExampleMessageSchema
 ```
 
-```Javascript
+JavaScript Example
+```JavaScript
 var mongoose = require("mongoose"),
     timestamps = require("mongoose-times");
 
@@ -41,9 +41,7 @@ ExampleMessageSchema.plugin(timestamps);
 var exampleMessage = mongoose.model("ExampleMessage", ExampleMessageSchema);
 ```
 
-## License
-
-(The MIT License)
+## MIT License
 
 Copyright (c) 2013 Nicholas Confer &lt;nicholasconfer@gmail.com&gt;
 
