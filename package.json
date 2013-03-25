@@ -1,10 +1,7 @@
 {
   "name": "mongoose-times",
   "description": "Mongoose plugin to add created and lastUpdated properties to schemas.  Date properties are auto-assigned by the plugin, and the key names can be easily customized to match your naming style.",
-  "author": {
-    "name": "Nicholas Confer",
-    "email": "nicholasconfer@gmail.com"
-  },
+  "author": "Nicholas Confer <nicholasconfer@gmail.com>",
   "keywords": [
     "mongoose",
     "mongodb",
@@ -21,10 +18,19 @@
     "url": "https://github.com/nicholasconfer/mongoose-times"
   },
   "dependencies": {
-    "mongoose" : ">= 3.0"
+    "mongoose": ">= 3.0"
   },
   "devDependencies": {
     "mocha": ">= 0.13.0",
     "should": ">= 0.2.1"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "2f35b0e88ca560f9aeff1a594ed05f32303481c7",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
