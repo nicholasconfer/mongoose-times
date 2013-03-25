@@ -31,7 +31,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -u bdd -R spec -c ./test/*.js"
   },
   "engine": {
     "node": ">= 0.6"
