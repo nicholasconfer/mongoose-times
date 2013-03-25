@@ -32,5 +32,8 @@
   },
   "scripts": {
     "test": "mocha"
+  },
+  "engine": {
+    "node": ">= 0.6"
   }
 }
