@@ -1,6 +1,6 @@
 {
   "name": "mongoose-times",
-  "description": "Mongoose plugin to add createDate and lastUpdateDate properties to schemas.  Date properties are auto-assigned by the plugin, and the key names can be easily customized to match your naming style.",
+  "description": "Mongoose plugin to add created and lastUpdated properties to schemas.  Date properties are auto-assigned by the plugin, and the key names can be easily customized to match your naming style.",
   "author": {
     "name": "Nicholas Confer",
     "email": "nicholasconfer@gmail.com"
@@ -10,9 +10,9 @@
     "mongodb",
     "plugin",
     "timestamps",
-    "time",
-    "createDate",
-    "lastUpdateDate"
+    "times",
+    "created",
+    "lastUpdated"
   ],
   "version": "0.1.0",
   "license": "MIT",

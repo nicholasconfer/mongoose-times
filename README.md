@@ -3,7 +3,7 @@ mongoose-times
 
 [![Build Status](https://secure.travis-ci.org/nicholasconfer/mongoose-times.png?branch=master)](https://travis-ci.org/nicholasconfer/mongoose-times)
 
-Plugin for [Mongoose](https://github.com/LearnBoost/mongoose) that adds `createDate` and `lastUpdateDate` date properties to your Schema.  The property names `createDate` and `lastUpdateDate` can be customized and the properties automatically generate timestamps when saving a document in mongoose.
+Plugin for [Mongoose](https://github.com/LearnBoost/mongoose) that adds `created` and `lastUpdated` date properties to your Schema.  The property names `created` and `lastUpdated` can be customized and the properties automatically generate timestamps when saving a document in mongoose.
 
 ## Installation
 
@@ -11,39 +11,40 @@ Plugin for [Mongoose](https://github.com/LearnBoost/mongoose) that adds `createD
 
 ## Usage
 
-The examples below create a message model that will include `createDate` and `lastUpdateDate` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
+The examples below create a message model that will include `created` and `lastUpdated` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
 
-[CoffeeScript](https://github.com/jashkenas/coffee-script) Example
+### [CoffeeScript](https://github.com/jashkenas/coffee-script) Example
 ```CoffeeScript
 mongoose = require "mongoose"
 timestamps = require "mongoose-times"
 
-ExampleMessageSchema = new Schema {
-  message: String
-}
+ExampleSchema = new Schema {}
+ExampleSchema.plugin timestamps
 
-ExampleMessageSchema.plugin timestamps
-
-exampleMessage = mongoose.model "ExampleMessage", ExampleMessageSchema
+example = mongoose.model "Example", ExampleSchema
 ```
+If you'd like to change the name of the key properties in your document just set them when calling the plugin method with the `created` and `lastUpdated` options
+`ExampleSchema.plugin timestamps { created: "created_at", lastUpdated: "updated_at" }`
 
-JavaScript Example
+### JavaScript Example
 ```JavaScript
 var mongoose = require("mongoose"),
     timestamps = require("mongoose-times");
 
-var ExampleMessageSchema = new Schema({
-  message: String
-});
+var ExampleSchema = new Schema({});
+ExampleSchema.plugin(timestamps);
 
-ExampleMessageSchema.plugin(timestamps);
-
-var exampleMessage = mongoose.model("ExampleMessage", ExampleMessageSchema);
+var example = mongoose.model("Example", ExampleSchema);
 ```
+
+Again, if you'd like to change the name of the key properties in your document just then when calling the plugin method with the `created` and `lastUpdated` options
+`ExampleSchema.plugin(timestamps, { created: "created_at", lastUpdated: "updated_at" });`
 
 ## MIT License
 
 Copyright (c) 2013 Nicholas Confer &lt;nicholasconfer@gmail.com&gt;
+
+There are other mongoose plugins for timestamps, but I wanted to learn to write a mongoose plugin, so I started a new repo and added customizable key names for the properties (a feature I don't believe was available before by the other plugins). This plugin was based on previous work from [mongoose-timestamp](https://github.com/drudge/mongoose-timestamp): Copyright (c) 2012 [Nicholas Penree](https://github.com/drudge) and [mongoose-time](https://github.com/yields/mongoose-time): Copyright (c) 2012 [Amir Abu Shareb](https://github.com/yields).  Thanks go out to both of these developers for sharing their code under MIT.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
