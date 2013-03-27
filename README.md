@@ -13,7 +13,7 @@ npm install mongoose-times
 
 ## Usage
 
-The examples below create a message model that will include `created` and `lastUpdated` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
+The examples below create a model that will include `created` and `lastUpdated` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
 
 ### [CoffeeScript](https://github.com/jashkenas/coffee-script) Example
 ```CoffeeScript
