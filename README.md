@@ -27,7 +27,7 @@ example = mongoose.model "Example", ExampleSchema
 ```
 If you'd like to change the name of the key properties in your document just set them when calling the plugin method with the `created` and `lastUpdated` options
 ```
-ExampleSchema.plugin timestamps { created: "created_at", lastUpdated: "updated_at" }
+ExampleSchema.plugin timestamps, { created: "created_at", lastUpdated: "updated_at" }
 ```
 
 ### JavaScript Example
