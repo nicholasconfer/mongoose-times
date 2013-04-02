@@ -11,6 +11,8 @@ Plugin for [Mongoose](https://github.com/LearnBoost/mongoose) that adds `created
 npm install mongoose-times
 ```
 
+For more details, visit the [mongoose-times on npm](https://npmjs.org/package/mongoose-times) page
+
 ## Usage
 
 The examples below create a model that will include `created` and `lastUpdated` properties in their schema.  Those properties will have timestamps that are automatically generated and updated when you save your document.
